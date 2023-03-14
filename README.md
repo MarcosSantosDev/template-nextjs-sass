@@ -34,6 +34,12 @@ Install the dependencies:
 npm install
 ```
 
+Enable Git hooks:
+
+```
+npx husky install
+```
+
 ## ☕ Application commands
 
 <b>To run the application in development mode, run the command below:</b>
