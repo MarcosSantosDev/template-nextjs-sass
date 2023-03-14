@@ -1,38 +1,81 @@
+<div align="center">
+    <img src="./public/next.svg" width="200" alt="Logo Nexjs">
+</div>
+
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
+## :books: Technologies used
+
+The main technologies used to develop the project were:
+
+###### In progress...
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## 💻 Prerequisites
 
-First, run the development server:
+<b>Before you begin, make sure you've met the following requirements:</b>
 
-```bash
+- node(versions 14.x.x or later)
+- npm(versions 5.x.x or later)
+
+## 🚀 Initial steps
+
+Clone the project:
+
+```
+git clone https://github.com/MarcosSantosDev/nextjs-playground.git
+```
+
+Install the dependencies:
+
+```
+npm install
+```
+
+## ☕ Application commands
+
+<b>To run the application in development mode, run the command below:</b>
+
+```
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+<b>To generate the application build, run the command below:</b>
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```
+npm run build
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+<b>To run the application on top of the build, in production mode, run the command below:</b>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```
+npm run start
+```
 
-## Learn More
+## 🤝 Contributing to the project
 
-To learn more about Next.js, take a look at the following resources:
+To contribute, follow these steps:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Fork this repository.
+2. Create a branch: `git checkout -b <branch_name>`.
+3. Make your changes and commit them: `git commit -m '<message_commit>'`
+4. Push to the original branch: `git push origin <project_name> / <local>`
+5. Create the pull request.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Alternatively, see the GitHub documentation at [how to create a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
-## Deploy on Vercel
+## :warning: Standards adopted in the project
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+During the construction of the project, some standards were adopted, check the documentation below, before contributing:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [Git](./docs/git.md)
+
+## :page_facing_up: License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
+Make with :heart: by [Marcos Santos](https://github.com/MarcosSantosDev)
