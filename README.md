@@ -2,14 +2,17 @@
     <img src="./public/next.svg" width="200" alt="Logo Nexjs">
 </div>
 
-
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-orange.svg)](https://github.com/prettier/prettier)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## :books: Technologies used
 
 The main technologies used to develop the project were:
 
-###### In progress...
+- [Typescript](https://www.typescriptlang.org/) - TypeScript is JavaScript with syntax for types.
+- [Eslint](https://eslint.org/) - ESLint statically analyzes your code to quickly find problems.
+- [Prettier](https://prettier.io/) - Opinionated code formatter.
+- [Husky (8.x.x)](https://typicode.github.io/husky) - Helps improve commits. You can use it to lint your commit messages, run tests, lint code, etc... when you commit or push.
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
@@ -66,11 +69,12 @@ npm run start
 
 To contribute, follow these steps:
 
-1. Fork this repository.
-2. Create a branch: `git checkout -b <branch_name>`.
-3. Make your changes and commit them: `git commit -m '<message_commit>'`
-4. Push to the original branch: `git push origin <project_name> / <local>`
-5. Create the pull request.
+1. Fork it!
+2. Create your feature branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -m 'feat: Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+
+**After your pull request is merged**, you can safely delete your branch.
 
 Alternatively, see the GitHub documentation at [how to create a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
