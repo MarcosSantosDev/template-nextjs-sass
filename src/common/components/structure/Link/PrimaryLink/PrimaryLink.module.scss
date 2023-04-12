@@ -1,0 +1,92 @@
+@import 'utilities/variables';
+@import 'utilities/mixins';
+
+.link {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+  column-gap: 8px;
+  letter-spacing: -0.04em;
+  text-decoration: initial;
+  width: fit-content;
+  font-family: $font-family-secondary;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+
+  @include font-size(12px);
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:focus {
+    text-decoration: underline;
+  }
+
+  &__row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  &__circle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 26px;
+    height: 26px;
+    border-radius: 100%;
+  }
+
+  /**
+  * Variations colors - White
+  */
+  &__text-white__circle-deep-green {
+    @include primary-link-variant-color($color-neutral-100, $color-brand-deep-green);
+  }
+
+  &__text-white__circle-magenta {
+    @include primary-link-variant-color($color-neutral-100, $color-brand-magenta);
+  }
+
+  &__text-white__circle-royal-blue {
+    @include primary-link-variant-color($color-neutral-100, $color-brand-royal-blue);
+  }
+
+  /**
+  * Variations colors - Black
+  */
+  &__text-black__circle-deep-green {
+    @include primary-link-variant-color($color-neutral-0, $color-brand-deep-green);
+  }
+
+  &__text-black__circle-magenta {
+    @include primary-link-variant-color($color-neutral-0, $color-brand-magenta);
+  }
+
+  &__text-black__circle-royal-blue {
+    @include primary-link-variant-color($color-neutral-0, $color-brand-royal-blue);
+  }
+
+  &--disable {
+    color: $color-neutral-50;
+    user-select: none;
+    pointer-events: none;
+
+    &:focus {
+      text-decoration: initial;
+    }
+
+    div {
+      user-select: none;
+      pointer-events: none;
+      background: $color-neutral-50;
+
+      svg {
+        @include custom-svg($color-neutral-70, 8px, 8px);
+      }
+    }
+  }
+}

@@ -6,7 +6,7 @@
     "ecmaFeatures": {
       "jsx": true
     }
-  },  
+  },
   "env": {
     "browser": true,
     "node": true,
@@ -33,6 +33,12 @@
         "extensions": [".ts", ".tsx", ".js", ".jsx"]
       }
     ],
+    "@typescript-eslint/no-empty-interface": [
+      "error",
+      {
+        "allowSingleExtends": true
+      }
+    ],
     "react/jsx-props-no-spreading": "off",
     "import/extensions": [
       "error",
@@ -45,38 +51,47 @@
       }
     ],
     "no-nested-ternary": "off",
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
+    "no-console": ["error", { "allow": ["warn", "error"] }],
+    "react/no-unknown-property": [
+      2,
+      {
+        "ignore": ["jsx", "global"]
+      }
+    ]
   },
   "overrides": [
-      // override "simple-import-sort" config
-      {
-        "files": ["*.js", "*.jsx", "*.ts", "*.tsx"],
-        "rules": {
-          "simple-import-sort/imports": [
-            "error",
-            {
-              "groups": [
-                // Packages `react` related packages come first.
-                ["^react", "^@?\\w"],
-                // Internal packages.
-                ["^(@|components)(/.*|$)"],
-                // Side effect imports.
-                ["^\\u0000"],
-                // Parent imports. Put `..` last.
-                ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
-                // Other relative imports. Put same-folder imports and `.` last.
-                ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
-                // Style imports.
-                ["^.+\\.?(css)$"]
-              ]
-            }
-          ]
-        }
+    // override "simple-import-sort" config
+    {
+      "files": ["*.js", "*.jsx", "*.ts", "*.tsx"],
+      "rules": {
+        "simple-import-sort/imports": [
+          "error",
+          {
+            "groups": [
+              // Packages `react` related packages come first.
+              ["^react", "^@?\\w"],
+              // Internal packages.
+              ["^(@|components)(/.*|$)"],
+              // Side effect imports.
+              ["^\\u0000"],
+              // Parent imports. Put `..` last.
+              ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+              // Other relative imports. Put same-folder imports and `.` last.
+              ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+              // Style imports.
+              ["^.+\\.?(css)$"]
+            ]
+          }
+        ],
+        "react/button-has-type": 0,
+        "sonarjs/no-nested-template-literals": 0
       }
+    }
   ],
   "settings": {
     "import/resolver": {
-        "typescript": {}
+      "typescript": {}
     }
   }
 }

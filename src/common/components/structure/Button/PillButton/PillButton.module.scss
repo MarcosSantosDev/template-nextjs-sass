@@ -1,0 +1,114 @@
+@import 'utilities/variables';
+@import 'utilities/mixins';
+
+.btn {
+  font-family: $font-family-secondary;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: -0.04em;
+  text-align: center;
+  width: max-content;
+  height: fit-content;
+  border: 1px solid transparent;
+  border-radius: 48px;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
+
+  /**
+  * Variations width
+  */
+  &__full-width {
+    width: 100%;
+  }
+
+  /**
+  * Variations by colors
+  */
+  &__deep-green {
+    background: $color-brand-deep-green;
+    color: $color-neutral-100;
+
+    @include btn-bg-linear-gradient-on-focus-and-hover($color-brand-deep-green);
+  }
+
+  &__yellow {
+    background: $color-brand-yellow;
+    color: $color-neutral-0;
+
+    @include btn-bg-linear-gradient-on-focus-and-hover($color-brand-yellow);
+  }
+
+  &__orange {
+    background: $color-brand-orange;
+    color: $color-neutral-100;
+
+    @include btn-bg-linear-gradient-on-focus-and-hover($color-brand-orange);
+  }
+
+  &__magenta {
+    background: $color-brand-magenta;
+    color: $color-neutral-100;
+
+    @include btn-bg-linear-gradient-on-focus-and-hover($color-brand-magenta);
+  }
+
+  &__royal-blue {
+    background: $color-brand-royal-blue;
+    color: $color-neutral-100;
+
+    @include btn-bg-linear-gradient-on-focus-and-hover($color-brand-royal-blue);
+  }
+
+  &__black {
+    background: $color-neutral-0;
+    color: $color-neutral-100;
+
+    @include btn-bg-linear-gradient-on-focus-and-hover($color-neutral-0);
+  }
+
+  &__white {
+    background: $color-neutral-100;
+    color: $color-neutral-0;
+
+    @include btn-bg-linear-gradient-on-focus-and-hover($color-neutral-100);
+  }
+
+  &__gray {
+    background: $color-neutral-90;
+    color: $color-neutral-0;
+
+    @include btn-bg-linear-gradient-on-focus-and-hover($color-neutral-90);
+  }
+
+  /**
+  * Variations by size
+  */
+  &__sm {
+    padding: 16px 56px;
+
+    @include font-size(12px);
+  }
+
+  &__md {
+    padding: 18px 58px;
+
+    @include font-size(14px);
+  }
+
+  &__lg {
+    padding: 20px 60px;
+
+    @include font-size(16px);
+  }
+
+  &__x-lg {
+    padding: 24px 64px;
+
+    @include font-size(20px);
+  }
+}
+

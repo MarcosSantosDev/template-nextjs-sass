@@ -1,0 +1,17 @@
+@import 'utilities/variables';
+@import 'utilities/mixins';
+
+.form-field-wrapper {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(3, auto);
+  justify-content: flex-start;
+
+  :nth-child(1) {
+    margin-bottom: 16px;
+  }
+
+  :nth-child(3) {
+    margin-top: 8px;
+  }
+}
