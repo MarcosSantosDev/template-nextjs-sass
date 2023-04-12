@@ -1,0 +1,11 @@
+@import 'utilities/variables';
+@import 'utilities/mixins';
+
+.error {
+  font-family: $font-family-primary;
+  font-weight: $font-weight-regular;
+  color: $color-brand-orange;
+  margin: 0;
+
+  @include font-size(12px);
+}

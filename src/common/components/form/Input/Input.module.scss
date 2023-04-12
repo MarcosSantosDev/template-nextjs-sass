@@ -1,0 +1,36 @@
+@import 'utilities/variables';
+@import 'utilities/mixins';
+
+.input {
+  border: 1px solid $color-neutral-20;
+  color: $color-neutral-20;
+  border-radius: 8px;
+  width: 568px;
+  height: 72px;
+  background-color: $color-neutral-10;
+  font-family: $font-family-primary;
+  font-weight: $font-weight-regular;
+  text-indent: 24px;
+
+  @include font-size(16px);
+
+  &:hover {
+    background-color: $color-neutral-20;
+  }
+
+  &:focus {
+    background-color: $color-neutral-10;
+    color: $color-neutral-100;
+    border-color: $color-neutral-50;
+  }
+
+  &:invalid {
+    border-color: $color-feedback-error;
+    background: $color-neutral-10;
+  }
+
+  ::placeholder {
+    color: $color-neutral-30;
+    text-indent: 24px;
+  }
+}

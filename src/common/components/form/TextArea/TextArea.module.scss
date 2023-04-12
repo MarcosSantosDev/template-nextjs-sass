@@ -1,0 +1,46 @@
+@import 'utilities/variables';
+@import 'utilities/mixins';
+
+.text-area {
+  resize: none;
+  background: linear-gradient(0deg, $color-neutral-10, $color-neutral-10),
+  linear-gradient(0deg, $color-neutral-20, $color-neutral-20);
+  color: $color-neutral-100;
+  border: 1px solid $color-neutral-20;
+  border-radius: 8px;
+  font-family: $font-family-primary;
+  font-weight: $font-weight-regular;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  font-size: 1rem;
+  text-indent: 24px;
+
+  @include font-size(16px);
+
+  ::placeholder {
+    color: $color-neutral-30;
+    font-family: $font-family-primary;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 148%;
+    letter-spacing: -0.04em;
+  }
+
+  &:hover:not(:focus) {
+    background: $color-neutral-20;
+    border: 1px solid $color-neutral-20;
+  }
+
+  &:focus {
+    background: linear-gradient(0deg, $color-neutral-10, $color-neutral-10),
+      linear-gradient(0deg, $color-neutral-50, $color-neutral-50);
+    border: 1px solid $color-neutral-50
+  }
+
+  &:invalid {
+    border-color: $color-feedback-error;
+    background: linear-gradient(0deg, $color-neutral-10, $color-neutral-10),
+      linear-gradient(0deg, $color-neutral-50, $color-neutral-50);
+  }
+}

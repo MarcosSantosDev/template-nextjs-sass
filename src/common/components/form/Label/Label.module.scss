@@ -1,0 +1,12 @@
+@import 'utilities/variables';
+@import 'utilities/mixins';
+
+.label {
+  display: flex;
+  flex-direction: column;
+  color: $color-neutral-100;
+  font-family: $font-family-primary;
+  font-weight: $font-weight-regular;
+
+  @include font-size(16px);
+}
