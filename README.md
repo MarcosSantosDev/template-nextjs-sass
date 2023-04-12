@@ -2,19 +2,7 @@
     <img src="./public/next.svg" width="200" alt="Logo Nexjs">
 </div>
 
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-orange.svg)](https://github.com/prettier/prettier)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-
-## :books: Technologies used
-
-The main technologies used to develop the project were:
-
-- [Typescript](https://www.typescriptlang.org/) - TypeScript is JavaScript with syntax for types.
-- [Eslint](https://eslint.org/) - ESLint statically analyzes your code to quickly find problems.
-- [Prettier](https://prettier.io/) - Opinionated code formatter.
-- [Husky (8.x.x)](https://typicode.github.io/husky) - Helps improve commits. You can use it to lint your commit messages, run tests, lint code, etc... when you commit or push.
-
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## 💻 Prerequisites
 
@@ -35,12 +23,6 @@ Install the dependencies:
 
 ```
 npm install
-```
-
-Enable Git hooks:
-
-```
-npx husky install
 ```
 
 ## ☕ Application commands
@@ -67,25 +49,19 @@ npm run start
 
 ## 🤝 Contributing to the project
 
-To contribute, follow these steps:
+<b>To contribute, follow these steps:</b>
 
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -m 'feat: Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
+1. Clone this repository.
+2. Create a branch:`git checkout -b <type>/<branch_name>`
+3. Make your changes and confirm them:
 
-**After your pull request is merged**, you can safely delete your branch.
+- Common commit message: `git commit -m "<type>: message"`
+- To commit with commitizen(commit message formatter): `npm run commit`
 
-Alternatively, see the GitHub documentation at [how to create a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+4. Push to original branch: `git push`
+5. Create the pull request to `development` branch.
 
 ## :warning: Standards adopted in the project
 
-During the construction of the project, some standards were adopted, check the documentation below, before contributing:
-
 - [Git](./docs/git.md)
-
-## :page_facing_up: License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
-
-Make with :heart: by [Marcos Santos](https://github.com/MarcosSantosDev)
+- [Sass](./docs/sass.md)
