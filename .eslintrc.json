@@ -10,7 +10,8 @@
   "env": {
     "browser": true,
     "node": true,
-    "es6": true
+    "es6": true,
+    "jest": true
   },
   "plugins": ["@typescript-eslint", "simple-import-sort", "testing-library"],
   "extends": [
@@ -57,6 +58,17 @@
       2,
       {
         "ignore": ["jsx", "global"]
+      }
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/*{.,_}{test,spec}.{ts,tsx}", // tests where the extension or filename suffix denotes that it is a test
+          "**/jest.config.ts", // jest config
+          "**/jest.setup.ts" // jest setup
+        ],
+        "optionalDependencies": false
       }
     ]
   },
