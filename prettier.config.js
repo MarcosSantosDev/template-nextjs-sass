@@ -5,7 +5,7 @@ module.exports = {
   semi: true,
   trailingComma: 'all',
   arrowParens: 'avoid',
-  printWidth: 120,
+  printWidth: 80,
   endOfLine: 'auto',
   bracketSpacing: true,
 };

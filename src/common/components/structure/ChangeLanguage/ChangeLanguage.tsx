@@ -1,18 +1,30 @@
 import { useRouter } from 'next/router';
 
+import styles from './ChangeLanguage.module.scss';
+
 function ChangeLanguage() {
-  const { locales = [], push, pathname } = useRouter();
+  const {
+    locales = [],
+    locale: currentLocale = 'pt',
+    push,
+    pathname,
+  } = useRouter();
 
   const handleChangeLanguage = (localeSelected: string) => {
     push(pathname, undefined, { locale: localeSelected });
   };
 
   return (
-    <div key="changeLanguage">
-      <span>Selecione o idioma: </span>
+    <div key="changeLanguage" className={styles['group-btn']}>
       {locales.map(locale => (
-        <button key={locale} type="button" onClick={() => handleChangeLanguage(locale)}>
-          {locale === 'pt' ? 'Portugues' : 'Inglês'}
+        <button
+          className={styles.btn}
+          data-selected={locale === currentLocale}
+          key={locale}
+          type="button"
+          onClick={() => handleChangeLanguage(locale)}
+        >
+          {locale.toLocaleLowerCase()}
         </button>
       ))}
     </div>
