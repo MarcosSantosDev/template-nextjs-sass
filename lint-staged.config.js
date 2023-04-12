@@ -11,5 +11,6 @@ module.exports = {
   '**/*.scss': filenames => `npx stylelint ${filenames.join(' ')}`,
 
   // this will Format HTML, MarkDown and JSON
-  '**/*.(html|md|json)': filenames => `npx prettier --write ${filenames.join(' ')}`,
+  '**/*.(html|md|json)': filenames =>
+    `npx prettier --write ${filenames.join(' ')}`,
 };

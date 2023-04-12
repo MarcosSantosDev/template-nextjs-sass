@@ -1,0 +1,31 @@
+@import 'utilities/variables';
+@import 'utilities/mixins';
+
+.group-btn {
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  border: none;
+  border-radius: 100%;
+  background-color: $color-neutral-0;
+  color: $color-neutral-100;
+  font-family: $font-family-secondary;
+
+  @include font-size(14px);
+
+  font-weight: $font-weight-semibold;
+  width: 30px;
+  height: 30px;
+  transition: filter 0.5s linear;
+
+  &:hover {
+    filter: opacity(0.8);
+  }
+
+  &[data-selected="true"] {
+    outline-offset: 2px;
+    outline: 2px solid $color-brand-royal-blue;
+  }
+}

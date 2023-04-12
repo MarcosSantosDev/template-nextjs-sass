@@ -28,3 +28,34 @@
 @mixin font-size($size) {
   font-size: calculate-rem($size);
 }
+
+@mixin custom-svg($color, $width: 16px, $height: 16px) {
+  width: $width;
+  height: $height;
+  color: $color;
+  fill: $color;
+}
+
+// Mixins - components/structure/Button
+@mixin btn-bg-linear-gradient-on-focus-and-hover($backgroundColor) {
+  &:hover:not([disabled]) {
+    background: linear-gradient(0deg, rgb(0 0 0 / 20%), rgb(0 0 0 / 20%)), $backgroundColor;
+  }
+
+  &:focus:not([disabled]) {
+    background: linear-gradient(0deg, rgb(0 0 0 / 20%), rgb(0 0 0 / 20%)), $backgroundColor;
+  }
+}
+
+// Mixins - components/structure/Link
+@mixin primary-link-variant-color($linkColor, $circleBgColor) {
+  color: $linkColor;
+
+  div {
+    background: $circleBgColor;
+
+    svg {
+      @include custom-svg($color-neutral-100, 8px, 8px);
+    }
+  }
+}
