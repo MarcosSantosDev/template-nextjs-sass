@@ -7,14 +7,20 @@ import { FormFieldWrapperProps } from './FormFieldWrapper.types';
 
 import styles from './FormFieldWrapper.module.scss';
 
-function FormFieldWrapper({ children, label, error }: React.PropsWithChildren<FormFieldWrapperProps>) {
+function FormFieldWrapper({
+  children,
+  label,
+  error,
+}: React.PropsWithChildren<FormFieldWrapperProps>) {
   const labelId = React.useId();
 
   const childComponent = React.Children.only(children);
 
   const childComponentWithProps = React.Children.map(childComponent, child => {
     if (React.isValidElement(child)) {
-      return React.cloneElement(child as React.ReactElement<{ id: string }>, { id: labelId });
+      return React.cloneElement(child as React.ReactElement<{ id: string }>, {
+        id: labelId,
+      });
     }
 
     return null;

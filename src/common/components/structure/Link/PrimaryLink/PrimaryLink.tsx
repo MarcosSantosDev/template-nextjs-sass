@@ -15,11 +15,15 @@ function PrimaryLink({
   icon = null,
   ...primaryLinkRestProps
 }: React.PropsWithChildren<PrimaryLinkProps>) {
-  const linkStartIconClass = iconPosition === 'start' ? styles['link__row-reverse'] : '';
+  const linkStartIconClass =
+    iconPosition === 'start' ? styles['link__row-reverse'] : '';
   const linkDisableClass = disabled ? styles['link--disable'] : '';
-  const linkVariantColorClass = styles[`link__text-${variantText}__circle-${variantCircle}`];
+  const linkVariantColorClass =
+    styles[`link__text-${variantText}__circle-${variantCircle}`];
 
-  const linkIcon = icon ? <div className={styles.link__circle}>{icon}</div> : null;
+  const linkIcon = icon ? (
+    <div className={styles.link__circle}>{icon}</div>
+  ) : null;
 
   return (
     <NextLink href={href} passHref legacyBehavior>

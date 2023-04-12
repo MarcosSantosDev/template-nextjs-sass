@@ -12,12 +12,15 @@ function CircularButton({
   endIcon,
   ...buttonRestProps
 }: React.PropsWithChildren<CircularButtonProps>) {
-  const activeFullWidth = iconOrientation === 'vertical' ? styles.btn__vertical : '';
+  const activeFullWidth =
+    iconOrientation === 'vertical' ? styles.btn__vertical : '';
 
   return (
     <button
       {...buttonRestProps}
-      className={`${styles.btn} ${styles[`btn__${size}`]} ${styles[`btn__${variantColor}`]} ${activeFullWidth}`}
+      className={`${styles.btn} ${styles[`btn__${size}`]} ${
+        styles[`btn__${variantColor}`]
+      } ${activeFullWidth}`}
     >
       {children}
       {endIcon}

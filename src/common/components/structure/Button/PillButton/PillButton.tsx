@@ -16,7 +16,9 @@ function PillButton({
   return (
     <button
       {...buttonRestProps}
-      className={`${styles.btn} ${styles[`btn__${size}`]} ${styles[`btn__${variantColor}`]} ${activeFullWidth}`}
+      className={`${styles.btn} ${styles[`btn__${size}`]} ${
+        styles[`btn__${variantColor}`]
+      } ${activeFullWidth}`}
     >
       {children}
     </button>
