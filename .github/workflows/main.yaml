@@ -10,3 +10,6 @@ jobs:
 
       - name: Cypress run
         uses: cypress-io/github-action@v5
+
+      - name: Run unit tests
+        run: npm test
