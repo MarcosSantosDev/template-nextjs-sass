@@ -13,21 +13,30 @@
     "es6": true,
     "jest": true
   },
-  "plugins": ["@typescript-eslint", "simple-import-sort", "testing-library"],
+  "plugins": [
+    "@typescript-eslint",
+    "simple-import-sort",
+    "testing-library",
+    "cypress"
+  ],
   "extends": [
     "next/core-web-vitals",
     "plugin:@typescript-eslint/recommended",
     "airbnb",
     "prettier",
     "plugin:prettier/recommended",
-    "plugin:sonarjs/recommended",
     "plugin:security/recommended",
-    "plugin:react-hooks/recommended"
+    "plugin:react-hooks/recommended",
+    "plugin:cypress/recommended"
   ],
   "rules": {
     "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/no-explicit-any": "error",
     "react/react-in-jsx-scope": "off",
+    "react/jsx-props-no-spreading": "off",
+    "no-nested-ternary": "off",
+    "import/prefer-default-export": "off",
+    "no-console": ["error", { "allow": ["warn", "error"] }],
     "react/jsx-filename-extension": [
       1,
       {
@@ -40,7 +49,6 @@
         "allowSingleExtends": true
       }
     ],
-    "react/jsx-props-no-spreading": "off",
     "import/extensions": [
       "error",
       "ignorePackages",
@@ -51,9 +59,6 @@
         "tsx": "never"
       }
     ],
-    "no-nested-ternary": "off",
-    "import/prefer-default-export": "off",
-    "no-console": ["error", { "allow": ["warn", "error"] }],
     "react/no-unknown-property": [
       2,
       {
@@ -63,12 +68,7 @@
     "import/no-extraneous-dependencies": [
       "error",
       {
-        "devDependencies": [
-          "**/*{.,_}{test,spec}.{ts,tsx}", // tests where the extension or filename suffix denotes that it is a test
-          "**/jest.config.ts", // jest config
-          "**/jest.setup.ts" // jest setup
-        ],
-        "optionalDependencies": false
+        "devDependencies": true
       }
     ]
   },
