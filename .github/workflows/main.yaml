@@ -1,0 +1,11 @@
+name: Test pipeline
+on: [push]
+jobs:
+  cypress-run:
+    steps:
+      - name: Checkout
+      uses: actions/checkout@v3
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      -name: Cypress
+      uses: cypress-io/github-action@v5
