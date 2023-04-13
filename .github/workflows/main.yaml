@@ -12,4 +12,4 @@ jobs:
         uses: cypress-io/github-action@v5
 
       - name: Jest run unit/integration tests
-        run: npm test --passWithNoTests
+        run: npm test
