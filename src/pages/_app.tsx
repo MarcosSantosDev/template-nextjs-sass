@@ -1,8 +1,9 @@
 import type { AppProps } from 'next/app';
 import { Heebo, Poppins } from 'next/font/google';
+import Head from 'next/head';
 import { appWithTranslation } from 'next-i18next';
 
-import { ChangeLanguage, Header } from '@/common/components/context';
+import { AppLayout, ChangeLanguage, Header } from '@/common/components/context';
 
 import '@/common/sass/main.scss';
 
@@ -25,16 +26,24 @@ const poppins = Poppins({
 function App({ Component, pageProps }: AppProps) {
   return (
     <>
+      <Head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
       <style jsx global>{`
         :root {
           --font-poppins: ${poppins.style.fontFamily};
           --font-heebo: ${heebo.style.fontFamily};
         }
       `}</style>
-      <Header>
-        <ChangeLanguage />
-      </Header>
-      <Component {...pageProps} />
+      <AppLayout>
+        <Header>
+          <ChangeLanguage />
+        </Header>
+        <main>
+          <Component {...pageProps} />
+        </main>
+      </AppLayout>
     </>
   );
 }
