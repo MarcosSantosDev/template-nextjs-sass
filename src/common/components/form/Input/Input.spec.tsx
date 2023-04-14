@@ -13,7 +13,7 @@ describe('Input component', () => {
       />,
     );
 
-    const inputElement = screen.getByDisplayValue('Loren ipsum');
+    const inputElement = screen.getByRole('textbox');
 
     expect(inputElement).toBeInTheDocument();
   });
@@ -42,7 +42,7 @@ describe('Input component', () => {
       />,
     );
 
-    const inputElement = screen.getByPlaceholderText('Write a description');
+    const inputElement = screen.getByRole('textbox');
 
     expect(inputElement).toHaveAttribute('id', 'description');
     expect(inputElement).toHaveAttribute('name', 'description');
