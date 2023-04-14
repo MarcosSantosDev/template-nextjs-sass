@@ -1,6 +1,8 @@
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 
+import { PillButton } from '@/common/components/structure';
+
 import styles from './Contact.module.scss';
 
 export default function Contact() {
@@ -12,17 +14,21 @@ export default function Contact() {
   const goToHomePage = () => push('/');
 
   return (
-    <>
+    <section className={styles['section-container']}>
       <h1 className={styles.title}>
         {translateCommon('welcome', { frameworkName: 'Nextjs' })}
       </h1>
+
       <h2>{translateContact('contact.title')}</h2>
 
-      <br />
-
-      <button id="go-to-home-page" type="button" onClick={goToHomePage}>
+      <PillButton
+        id="go-to-home-page"
+        type="button"
+        onClick={goToHomePage}
+        variantColor="orange"
+      >
         {translateContact('contact.link_go_to_home_page')}
-      </button>
-    </>
+      </PillButton>
+    </section>
   );
 }
