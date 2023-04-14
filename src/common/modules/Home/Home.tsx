@@ -20,7 +20,7 @@ export default function Home() {
 
       <br />
 
-      <button type="button" onClick={goToContactPage}>
+      <button id="go-to-contact-page" type="button" onClick={goToContactPage}>
         {translateHome('home.link_go_to_contact_page')}
       </button>
     </>
