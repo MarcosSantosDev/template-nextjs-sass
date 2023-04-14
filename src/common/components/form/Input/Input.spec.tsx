@@ -32,12 +32,13 @@ describe('Input component', () => {
     expect(inputElement).toBeTruthy();
   });
 
-  it('must check component attributes "id" and "name"', () => {
+  it('should check if component attributes "id", "name" and "aria-invalid" are present', () => {
     render(
       <Input
         type="text"
         id="description"
         name="description"
+        aria-invalid="false"
         placeholder="Write a description"
       />,
     );
@@ -46,5 +47,6 @@ describe('Input component', () => {
 
     expect(inputElement).toHaveAttribute('id', 'description');
     expect(inputElement).toHaveAttribute('name', 'description');
+    expect(inputElement).toHaveAttribute('aria-invalid', 'false');
   });
 });
