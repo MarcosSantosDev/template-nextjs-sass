@@ -8,7 +8,7 @@ describe('Error component', () => {
   const errorText = 'This field is required!';
 
   it(`should have a text "${errorText}" in the document`, () => {
-    render(<Error>{errorText}</Error>);
+    render(<Error showError>{errorText}</Error>);
 
     const elementError = screen.getByText(errorText);
 
@@ -16,10 +16,19 @@ describe('Error component', () => {
   });
 
   it(`should have a text "${errorText}" inside element`, () => {
-    render(<Error>{errorText}</Error>);
+    render(<Error showError>{errorText}</Error>);
 
     const elementError = screen.getByRole('alert');
 
     expect(elementError.innerHTML).toEqual(errorText);
+  });
+
+  it('should not be visible to the user', () => {
+    render(<Error showError={false}>{errorText}</Error>);
+
+    const elementError = screen.queryByRole('alert');
+
+    expect(elementError).toBeNull();
+    expect(elementError).not.toBeInTheDocument();
   });
 });
