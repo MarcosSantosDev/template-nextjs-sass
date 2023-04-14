@@ -2,8 +2,7 @@ import type { AppProps } from 'next/app';
 import { Heebo, Poppins } from 'next/font/google';
 import { appWithTranslation } from 'next-i18next';
 
-import { Header } from '@/common/components/context';
-import { ChangeLanguage } from '@/common/components/structure';
+import { ChangeLanguage, Header } from '@/common/components/context';
 
 import '@/common/sass/main.scss';
 
