@@ -1,7 +1,6 @@
 import * as React from 'react';
 
-import Error from '../Error/Error';
-import Label from '../Label/Label';
+import { Error, Label } from '@/common/components/form';
 
 import { FormFieldWrapperProps } from './FormFieldWrapper.types';
 
