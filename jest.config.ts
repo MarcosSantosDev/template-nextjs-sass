@@ -9,10 +9,10 @@ const createJestConfig = nextJest({
 // Add any custom config to be passed to Jest
 const config: Config = {
   // Add more setup options before each test is run
-  roots: ['<rootDir>/src/'],
+  roots: ['<rootDir>/src/', '<rootDir>/__tests__/'],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   testEnvironment: 'jest-environment-jsdom',
-  testMatch: ['**/__tests__/**/*.spec.ts?(x)', '**/**/*.spec.ts?(x)'],
+  testMatch: ['**/**/*.spec.ts?(x)'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
   },
