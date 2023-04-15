@@ -1,10 +1,12 @@
 /// <reference types="cypress" />
 
 declare namespace Cypress {
-  // interface Chainable {
-  // login(email: string, password: string): Chainable<void>
-  // drag(subject: string, options?: Partial<TypeOptions>): Chainable<Element>
-  // dismiss(subject: string, options?: Partial<TypeOptions>): Chainable<Element>
-  // visit(originalFn: CommandOriginalFn, url: string, options: Partial<VisitOptions>): Chainable<Element>
-  // }
+  interface Chainable {
+    checkTheHomePageInPtBrLanguage(): Chainable<void>;
+    checkTheHomepageInEnUsLanguage(): Chainable<void>;
+    checkTheContactpageInPtBrLanguage(): Chainable<void>;
+    checkTheContactpageInEnUsLanguage(): Chainable<void>;
+    validateLanguageSwitchToPtBr(): Chainable<void>;
+    validateLanguageSwitchToEnUS(): Chainable<void>;
+  }
 }

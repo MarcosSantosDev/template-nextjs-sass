@@ -10,6 +10,9 @@ jobs:
 
       - name: Cypress runs E2E tests
         uses: cypress-io/github-action@v5
+        with:
+            build: npm run build
+            start: npm start
 
       - name: Jest run unit/integration tests
         run: npm test

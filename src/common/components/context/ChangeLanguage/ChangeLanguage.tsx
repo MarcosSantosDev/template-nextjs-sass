@@ -15,7 +15,11 @@ function ChangeLanguage() {
   };
 
   return (
-    <div key="changeLanguage" className={styles['group-btn']}>
+    <div
+      key="changeLanguage"
+      id="change-language"
+      className={styles['group-btn']}
+    >
       {locales.map(locale => (
         <button
           className={styles.btn}
@@ -24,7 +28,7 @@ function ChangeLanguage() {
           type="button"
           onClick={() => handleChangeLanguage(locale)}
         >
-          {locale.toLocaleLowerCase()}
+          {locale.toLocaleUpperCase()}
         </button>
       ))}
     </div>

@@ -9,16 +9,17 @@
 .btn {
   border: none;
   border-radius: 100%;
-  background-color: $color-neutral-0;
+  background-color: transparent;
   color: $color-neutral-100;
-  font-family: $font-family-secondary;
-
-  @include font-size(14px);
-
-  font-weight: $font-weight-semibold;
   width: 30px;
   height: 30px;
   transition: filter 0.5s linear;
+  font-family: $font-family-secondary;
+  text-align: center;
+  line-height: normal;
+  font-weight: $font-weight-semibold;
+
+  @include font-size(14px);
 
   &:hover {
     filter: opacity(0.8);
