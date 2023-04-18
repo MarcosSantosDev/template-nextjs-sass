@@ -25,42 +25,49 @@ function plopGenerator(
         },
       },
     ],
-    actions: data => {
-      const componentTypeIsContext = data.componentType === 'context';
+    actions(promptData) {
+      const componentTypeIsContext = promptData.componentType === 'context';
 
-      const componentWithContext = componentTypeIsContext
+      const componentContext = componentTypeIsContext
         ? '/{{kebabCase contextName}}'
         : '';
 
-      const componentMainPath = `../src/common/components/{{componentType}}`;
+      const pathToComponentsFolder =
+        '../src/common/components/{{kebabCase componentType}}';
+      const pathToIntegrationTestFolder =
+        '../__tests__/components/{{kebabCase contextName}}';
 
-      const componentPath = `${componentMainPath}${componentWithContext}/{{pascalCase componentName}}/{{pascalCase componentName}}`;
+      const pathToComponentFile = `${pathToComponentsFolder}${componentContext}/{{pascalCase componentName}}/{{pascalCase componentName}}`;
+
+      const pathToComponentTestFile = componentTypeIsContext
+        ? `${pathToIntegrationTestFolder}/{{pascalCase componentName}}`
+        : pathToComponentFile;
 
       return [
         {
           type: 'modify',
-          path: `${componentMainPath}/index.ts`,
+          path: `${pathToComponentsFolder}/index.ts`,
           pattern: /(\/\/ NEW PLOP COMPONENT EXPORT)/g,
-          template: `export { default as {{pascalCase componentName}} } from '.${componentWithContext}/{{pascalCase componentName}}/{{pascalCase componentName}}';\n$1`,
+          template: `export { default as {{pascalCase componentName}} } from '.${componentContext}/{{pascalCase componentName}}/{{pascalCase componentName}}';\n$1`,
         },
         {
           type: 'add',
-          path: `${componentPath}.tsx`,
+          path: `${pathToComponentFile}.tsx`,
           templateFile: 'templates/components/component.hbs',
         },
         {
           type: 'add',
-          path: `${componentPath}.module.scss`,
+          path: `${pathToComponentFile}.module.scss`,
           templateFile: 'templates/components/styles.hbs',
         },
         {
           type: 'add',
-          path: `${componentPath}.types.tsx`,
+          path: `${pathToComponentFile}.types.tsx`,
           templateFile: 'templates/components/types.hbs',
         },
         {
           type: 'add',
-          path: `${componentPath}.spec.tsx`,
+          path: `${pathToComponentTestFile}.spec.tsx`,
           templateFile: 'templates/components/tests.hbs',
         },
       ];
