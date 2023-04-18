@@ -1,0 +1,9 @@
+describe.only('{{pascalCase pageName}} page', () => {
+  beforeEach(() => {
+    cy.visit('http://localhost:3000/{{kebabCase pageName}}');
+  });
+
+  it('should visit to the {{pascalCase pageName}} page', () => {
+    cy.contains('Pagina {{pascalCase pageName}}').should('be.visible');
+  });
+});

@@ -76,8 +76,51 @@ function plopGenerator(
 
   plop.setGenerator('pages', {
     description: 'Page generator',
-    prompts: [],
-    actions: [],
+    prompts: [
+      {
+        type: 'input',
+        name: 'pageName',
+        message: 'What is the name of the page?',
+      },
+    ],
+    actions: [
+      {
+        type: 'add',
+        path: '../src/pages/{{kebabCase pageName}}.tsx',
+        templateFile: 'templates/pages/page.hbs',
+      },
+      {
+        type: 'modify',
+        path: '../src/common/modules/index.ts',
+        pattern: /(\/\/ NEW PLOP MODULE EXPORT)/g,
+        template: `export { default as {{pascalCase pageName}} } from './{{pascalCase pageName}}/{{pascalCase pageName}}';\n$1`,
+      },
+      {
+        type: 'add',
+        path: '../src/common/modules/{{pascalCase pageName}}/{{pascalCase pageName}}.tsx',
+        templateFile: 'templates/pages/module.hbs',
+      },
+      {
+        type: 'add',
+        path: '../src/common/modules/{{pascalCase pageName}}/{{pascalCase pageName}}.module.scss',
+        templateFile: 'templates/pages/module-style.hbs',
+      },
+      {
+        type: 'add',
+        path: '../src/common/language/pt/{{kebabCase pageName}}.json',
+        templateFile: 'templates/pages/language-pt.hbs',
+      },
+      {
+        type: 'add',
+        path: '../src/common/language/en/{{kebabCase pageName}}.json',
+        templateFile: 'templates/pages/language-en.hbs',
+      },
+      {
+        type: 'add',
+        path: '../cypress/e2e/{{kebabCase pageName}}.cy.ts',
+        templateFile: 'templates/pages/e2e.hbs',
+      },
+    ],
   });
 }
 
