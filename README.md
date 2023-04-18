@@ -39,6 +39,10 @@
 
 - [sass](https://sass-lang.com/)
 
+**Generators**
+
+- [plopjs](https://plopjs.com)
+
 ## 🚀 Initial steps
 
 Clone the project:

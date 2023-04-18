@@ -1,5 +1,3 @@
-import * as React from 'react';
-
 import { PillButtonProps } from './PillButton.types';
 
 import styles from './PillButton.module.scss';
@@ -10,7 +8,7 @@ function PillButton({
   variantColor = 'deep-green',
   size = 'md',
   ...buttonRestProps
-}: React.PropsWithChildren<PillButtonProps>) {
+}: PillButtonProps) {
   const activeFullWidth = fullWidth ? styles['btn__full-width'] : '';
 
   return (

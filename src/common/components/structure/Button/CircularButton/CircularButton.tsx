@@ -1,5 +1,3 @@
-import * as React from 'react';
-
 import { CircularButtonProps } from './CircularButton.types';
 
 import styles from './CircularButton.module.scss';
@@ -11,7 +9,7 @@ function CircularButton({
   iconOrientation = 'horizontal',
   endIcon,
   ...buttonRestProps
-}: React.PropsWithChildren<CircularButtonProps>) {
+}: CircularButtonProps) {
   const activeFullWidth =
     iconOrientation === 'vertical' ? styles.btn__vertical : '';
 

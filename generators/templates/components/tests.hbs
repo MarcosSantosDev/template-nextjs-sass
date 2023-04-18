@@ -1,0 +1,15 @@
+import { render, screen } from '@testing-library/react';
+
+import {{pascalCase componentName}} from './{{pascalCase componentName}}';
+
+describe('{{pascalCase componentName}} component', () => {
+  it('should be in the document', () => {
+    const text = 'lorem ipsum';
+
+    render(<{{pascalCase componentName}}>{text}</{{pascalCase componentName}}>);
+
+    const element = screen.getByText(text);
+
+    expect(element).toBeInTheDocument();
+  });
+});

@@ -1,0 +1,29 @@
+import { GetStaticProps } from 'next';
+import Head from 'next/head';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
+import { {{pascalCase pageName}} } from '@/common/modules';
+
+export default function {{pascalCase pageName}}Page() {
+  const { t: translate{{pascalCase pageName}} } = useTranslation('{{kebabCase pageName}}');
+
+  return (
+    <>
+      <Head>
+        <title>{translate{{pascalCase pageName}}('{{kebabCase pageName}}.title')}</title>
+        <meta name="description" content="{{pascalCase pageName}}" />
+      </Head>
+
+      <{{pascalCase pageName}} />
+    </>
+  );
+}
+
+export const getStaticProps: GetStaticProps = async ({ locale = 'pt' }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['{{kebabCase pageName}}', 'common'])),
+    },
+  };
+};

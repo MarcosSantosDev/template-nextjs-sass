@@ -1,0 +1,9 @@
+import { {{pascalCase componentName}}Props } from './{{pascalCase componentName}}.types';
+
+import styles from './{{pascalCase componentName}}.module.scss';
+
+function {{pascalCase componentName}}({ children }: {{pascalCase componentName}}Props) {
+  return <div className={styles.container}>{children}</div>;
+}
+
+export default {{pascalCase componentName}};

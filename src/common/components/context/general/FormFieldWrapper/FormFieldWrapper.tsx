@@ -12,11 +12,7 @@ type InputObjectCloneProps = {
   'aria-invalid': boolean;
 };
 
-function FormFieldWrapper({
-  children,
-  label,
-  error,
-}: React.PropsWithChildren<FormFieldWrapperProps>) {
+function FormFieldWrapper({ children, label, error }: FormFieldWrapperProps) {
   const labelId = React.useId();
   const errorMessageId = React.useId();
 
