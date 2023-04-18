@@ -1,6 +1,6 @@
 Cypress.Commands.add('checkTheHomePageInPtBrLanguage', () => {
   cy.title().should('eq', 'Pagina inicial');
-  cy.get('h1').contains('Bem-vindo à página inicial do Playground Nextjs');
+  cy.get('h1').contains('Bem-vindo ao Playground Nextjs');
   cy.get('h2').contains('Pagina inicial');
   cy.contains('Ir para pagina de contato').should('be.visible');
 });
@@ -13,7 +13,7 @@ Cypress.Commands.add('checkTheHomepageInEnUsLanguage', () => {
 
 Cypress.Commands.add('checkTheContactpageInPtBrLanguage', () => {
   cy.title().should('eq', 'Pagina de contato');
-  cy.get('h1').contains('Bem-vindo à página inicial do Playground Nextjs');
+  cy.get('h1').contains('Bem-vindo ao Playground Nextjs');
   cy.get('h2').contains('Pagina de contato');
   cy.contains('Ir para pagina inicial').should('be.visible');
 });
