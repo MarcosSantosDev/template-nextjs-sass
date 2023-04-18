@@ -2,6 +2,11 @@
   "name": "nextjs-playground",
   "version": "1.1.0",
   "private": true,
+  "author": {
+    "name": "MARCOS ADRIANO FERREIRA DOS SANTOS",
+    "email": "marcosadriano034@gmail.com",
+    "url": "https://github.com/MarcosSantosDev"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
