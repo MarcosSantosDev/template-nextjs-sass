@@ -1,3 +1,5 @@
+import * as React from 'react';
+
 export interface ButtonStyleProps {
   variantColor:
     | 'deep-green'
@@ -9,4 +11,5 @@ export interface ButtonStyleProps {
     | 'white'
     | 'gray';
   size: 'sm' | 'md' | 'lg' | 'x-lg';
+  children: React.ReactNode;
 }

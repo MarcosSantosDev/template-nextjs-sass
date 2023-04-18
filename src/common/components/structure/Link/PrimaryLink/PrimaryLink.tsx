@@ -14,7 +14,7 @@ function PrimaryLink({
   iconPosition = 'end',
   icon = null,
   ...primaryLinkRestProps
-}: React.PropsWithChildren<PrimaryLinkProps>) {
+}: PrimaryLinkProps) {
   const linkStartIconClass =
     iconPosition === 'start' ? styles['link__row-reverse'] : '';
   const linkDisableClass = disabled ? styles['link--disable'] : '';

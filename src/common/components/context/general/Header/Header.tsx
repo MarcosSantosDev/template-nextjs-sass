@@ -1,9 +1,11 @@
 import * as React from 'react';
 import Image from 'next/image';
 
+import { HeaderProps } from './Header.types';
+
 import styles from './Header.module.scss';
 
-function Header({ children }: React.PropsWithChildren<unknown>) {
+function Header({ children }: HeaderProps) {
   return (
     <header className={styles.navbar}>
       <Image
