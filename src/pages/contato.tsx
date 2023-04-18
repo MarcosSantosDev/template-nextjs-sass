@@ -12,7 +12,7 @@ export default function ContactPage() {
     <>
       <Head>
         <title>{translateContact('contact.title')}</title>
-        <meta name="description" content="Contato | De pessoas para pessoas" />
+        <meta name="description" content="Contato | Playground Nextjs" />
       </Head>
 
       <Contact />
