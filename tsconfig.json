@@ -27,5 +27,10 @@
     "src/**/*.tsx",
     "__tests__/**/*.tsx"
   ],
-  "exclude": ["node_modules", "src/**/*.spec.ts", "__tests__/**/*.spec.ts"]
+  "exclude": [
+    "node_modules",
+    "src/**/*.spec.ts",
+    "__tests__/**/*.spec.ts",
+    "generators"
+  ]
 }
