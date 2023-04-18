@@ -1,6 +1,6 @@
-describe.only('{{pascalCase pageName}} page', () => {
+describe('{{pascalCase pageName}} page', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000/{{kebabCase pageName}}');
+    cy.visit('http://localhost:3000/{{kebabCase routeNameForThePage}}');
   });
 
   it('should visit to the {{pascalCase pageName}} page', () => {

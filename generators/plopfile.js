@@ -79,6 +79,11 @@ function plopGenerator(
     prompts: [
       {
         type: 'input',
+        name: 'routeNameForThePage',
+        message: 'What is the route name for the page?',
+      },
+      {
+        type: 'input',
         name: 'pageName',
         message: 'What is the name of the page?',
       },
@@ -86,7 +91,7 @@ function plopGenerator(
     actions: [
       {
         type: 'add',
-        path: '../src/pages/{{kebabCase pageName}}.tsx',
+        path: '../src/pages/{{kebabCase routeNameForThePage}}.tsx',
         templateFile: 'templates/pages/page.hbs',
       },
       {
