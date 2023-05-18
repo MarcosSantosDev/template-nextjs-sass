@@ -1,9 +1,10 @@
-import axios, { AxiosInstance, AxiosRequestConfig } from 'axios';
+import type { AxiosInstance, AxiosRequestConfig } from 'axios';
+import axios from 'axios';
 
-import { NODE_ENV, uri } from '@/common/constants/environment-variables';
+import { BASE_URL } from '@/common/constants/environment-variables';
 
 const axiosiInstance = axios.create({
-  baseURL: uri[NODE_ENV],
+  baseURL: BASE_URL,
 });
 
 const api = (httpInstance: AxiosInstance) => {

@@ -1,4 +1,4 @@
-import { APP_KEY } from '../../utils/localStorage';
+import { APP_KEY, USER_TOKEN } from '../../constants/environment-variables';
 
 import { checkUserAuthenticated } from '.';
 
@@ -9,7 +9,7 @@ beforeEach(() => {
 describe('checkUserAuthenticated', () => {
   it('should return true when user is authenticated', () => {
     window.localStorage.setItem(
-      `${APP_KEY}_${process.env.NEXT_PUBLIC_USER_TOKEN}`,
+      `${APP_KEY}:${USER_TOKEN}`,
       JSON.stringify({ token: 'token' }),
     );
 

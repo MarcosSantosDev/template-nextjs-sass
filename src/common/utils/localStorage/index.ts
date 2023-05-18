@@ -1,17 +1,17 @@
-export const APP_KEY = 'APPKEY';
+import { APP_KEY } from '@/common/constants/environment-variables';
 
-export function getStorageItem<T>(key: string): T | '' {
-  if (typeof window === 'undefined') return '';
+export function getStorageItem<T>(key: string): T | null {
+  if (typeof window === 'undefined') return null;
 
-  const data = window.localStorage.getItem(`${APP_KEY}_${key}`) ?? '';
+  const storageItem = window.localStorage.getItem(`${APP_KEY}:${key}`);
 
-  return JSON.parse(data);
+  return storageItem ? JSON.parse(storageItem) : null;
 }
 
 export function setStorageItem(key: string, value: unknown) {
   if (typeof window !== 'undefined') {
-    const data = JSON.stringify(value);
+    const storageNewItem = JSON.stringify(value);
 
-    window.localStorage.setItem(`${APP_KEY}_${key}`, data);
+    window.localStorage.setItem(`${APP_KEY}:${key}`, storageNewItem);
   }
 }
