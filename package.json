@@ -1,6 +1,6 @@
 {
   "name": "nextjs-playground",
-  "version": "1.2.1",
+  "version": "1.3.1",
   "private": true,
   "author": {
     "name": "MARCOS ADRIANO FERREIRA DOS SANTOS",
@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@types/react-dom": "^18.0.11",
+    "axios": "^1.4.0",
     "i18next": "^22.4.11",
     "next": "13.2.4",
     "next-i18next": "^13.2.2",
@@ -32,6 +33,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.5.0",
     "@commitlint/config-conventional": "^17.4.4",
+    "@faker-js/faker": "^8.0.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@types/node": "^18.15.1",

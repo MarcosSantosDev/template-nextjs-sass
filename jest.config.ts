@@ -12,7 +12,9 @@ const config: Config = {
   roots: ['<rootDir>/src/', '<rootDir>/__tests__/'],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   testEnvironment: 'jest-environment-jsdom',
+  testPathIgnorePatterns: ['/node_modules', '/.next/'],
   testMatch: ['**/**/*.spec.ts?(x)'],
+  collectCoverage: false,
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
   },

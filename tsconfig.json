@@ -15,7 +15,6 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "rootDirs": ["src"],
-    "incremental": false,
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
@@ -29,8 +28,9 @@
   ],
   "exclude": [
     "node_modules",
+    "cypress",
+    "generators",
     "src/**/*.spec.ts",
-    "__tests__/**/*.spec.ts",
-    "generators"
+    "__tests__/**/*.spec.ts"
   ]
 }
