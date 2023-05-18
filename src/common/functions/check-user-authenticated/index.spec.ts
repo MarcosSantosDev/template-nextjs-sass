@@ -1,4 +1,4 @@
-import { APP_KEY } from '@/common/utils/localStorage';
+import { APP_KEY } from '../../utils/localStorage';
 
 import { checkUserAuthenticated } from '.';
 
