@@ -70,7 +70,9 @@
       {
         "devDependencies": true
       }
-    ]
+    ],
+    "@typescript-eslint/no-non-null-assertion": "error",
+    "prefer-destructuring": "off"
   },
   "overrides": [
     // Only uses Testing Library lint rules in test files
